@@ -1,8 +1,8 @@
 import * as React from "react"
 import { useEffect, useState, useCallback, useMemo, useReducer, useRef } from "react"
-// import { useSelector, useDispatch } from "react-redux"
+import { connect } from "react-redux"
 
-import { useSelector, useDispatch } from '../../index'
+import { useSelector, useDispatch } from '../../../utils/redux-hook'
 
 const Test = (props: any) => {
     const { addTodo } = props
@@ -20,4 +20,5 @@ const qwe = (state: any) => {
 }
 
 // 注入数据或者方法（第一个数据，第二个方法）
+// connect
 export default Test

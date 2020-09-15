@@ -5,6 +5,8 @@ import './index.common.css'
 import Main from "./components/main"
 import myStore from '../redux'
 
+import { MyContext } from '../utils/redux-hook'
+
 const dpr = window.devicePixelRatio || 1
 const docEl = document.documentElement
 // detect 0.5px supports
@@ -19,11 +21,5 @@ if (dpr >= 2) {
     }
     docEl.removeChild(fakeBody)
 }
-
-
-const MyContext = React.createContext(null)
-export const useStore = createStoreHook(MyContext)
-export const useDispatch = createDispatchHook(MyContext)
-export const useSelector = createSelectorHook(MyContext)
 
 ReactDOM.render(<Provider context={MyContext} store={myStore}><Main /></Provider>, document.getElementById("main"))
