@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useEffect, useState, useCallback, useMemo, useReducer, useRef } from "react"
-import { useStore, useSelector, useDispatch } from '../../../utils/redux-hook'
+import { useStore, useSelector, useDispatch } from '../../../../utils/redux'
 
 const Test = () => {
     const store = useStore()

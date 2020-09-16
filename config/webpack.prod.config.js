@@ -85,7 +85,7 @@ const config = merge(commonConfig, {
   }
 })
 routers.map((item) => {
-  const tempSrc = path.join(appDir, `./${item}/index.html`)
+  const tempSrc = path.join(appDir, `./page/${item}/index.html`)
   const plugin = new HtmlWebpackPlugin({
     filename: `${item}.html`,
     dll: `${assestPathName}/dll.js`,
@@ -96,7 +96,7 @@ routers.map((item) => {
       collapseWhitespace: true,//删除空格、换行
     },
   })
-  config.entry[item] = [path.resolve(appDir, `./${item}/index.tsx`)]
+  config.entry[item] = [path.resolve(appDir, `./page/${item}/index.tsx`)]
   config.plugins.push(plugin)
 })
 

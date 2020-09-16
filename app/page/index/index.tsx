@@ -3,9 +3,9 @@ import * as ReactDOM from "react-dom"
 import { Provider, createStoreHook, createDispatchHook, createSelectorHook } from 'react-redux'
 import './index.common.css'
 import Main from "./components/main"
-import myStore from '../redux'
+import myStore from '../../store'
 
-import { MyContext } from '../utils/redux-hook'
+import { MyContext } from '../../utils/redux'
 
 const dpr = window.devicePixelRatio || 1
 const docEl = document.documentElement
