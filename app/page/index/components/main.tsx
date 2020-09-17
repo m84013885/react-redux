@@ -11,16 +11,10 @@ import Test from './test'
 import Test1 from './test1'
 
 const Main = () => {
-    //     | autoplay | number | 86400000 | 自动切换时间 | 否 |
-    // | loop | bool | true | 让Swiper看起来是循环 | 否 |
-    // | min | number | 10 | 最小滑动距离(滑动大于此值时切换) | 否 |
-    // | changeIndex | func | null | 返回当前的index | 否 |
-    // | noTouch | bool | false | 禁止触碰 | 否 |
-    // | init | number | 1 | 禁止触碰 | 否 |
     return (
         <React.Fragment>
             <div className={style.scrollView}>
-                <Swiper>
+                <Swiper autoplay={3000}>
                     <div>123</div>
                     <div>125</div>
                 </Swiper>
